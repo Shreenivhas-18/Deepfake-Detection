@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detection</title>
+    <link rel="stylesheet" href="../static/image.css">
+    <script src="../static/image.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h1>Deepfake Image Detection</h1>
+            <p>Upload an image to check if it is real or fake.</p>
+
+            <form id="uploadForm" enctype="multipart/form-data">
+                <label for="fileInput">Choose Image</label>
+                <input type="file" name="image" id="fileInput" accept="image/*">
+                <p id="fileName">No file selected</p>
+                <button type="submit">Detect Deepfake</button>
+            </form>
+
+            <div class="result" id="resultMessage"></div>
+            <div id="confidenceText"></div>
+        </div>
+
+        <div class="image-preview" id="imagePreviewContainer" style="display: none;">
+            <p class="uploaded-file-label">Uploaded Image</p>
+            <img id="uploadedImage" alt="Uploaded Image Preview">
+        </div>
+    </div>
+</body>
+</html>

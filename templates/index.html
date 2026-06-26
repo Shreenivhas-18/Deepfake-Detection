@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detection</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h1>Deepfake video Detection</h1>
+            <p>Upload a video to check if it is real or fake.</p>
+
+            <form id="uploadForm" enctype="multipart/form-data">
+                <label for="fileInput">Choose File</label>
+                <input type="file" name="video" id="fileInput" accept="video/*">
+                <p id="fileName">No file selected</p>
+                <button type="submit">Detect Deepfake</button>
+            </form>
+
+            <div class="result" id="resultMessage"></div>
+            <div id="confidenceText"></div>
+        </div>
+
+        <div class="video-player" id="videoPlayerContainer" style="display: none;">
+            <p class="uploaded-file-label">Uploaded File</p>
+            <video id="uploadedVideo" controls autoplay loop muted ></video>
+        </div>
+    </div>
+</body>
+</html>

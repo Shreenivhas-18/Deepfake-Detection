@@ -1,0 +1,5 @@
+image_models/
+Video_models/
+__pycache__/
+*.pyc
+.env

@@ -1,0 +1,81 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f4f8;
+    background: linear-gradient(135deg, #c3dafe, #e0e7ff, #f0f4f8); /* Adjusted gradient with blue hues */
+}
+
+.container {
+    width: 90%; /* Adjusted width for larger content area */
+    max-width: 1200px; /* Increased max-width */
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.12); /* Slightly less transparent */
+    backdrop-filter: blur(15px); /* Blur effect */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Increased shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.25); /* Enhancing border for a glassy look */
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.container:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+    transform: translateY(-10px); /* Slight lift effect on hover */
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #4a5568; /* Darker text for better contrast */
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Added gap between buttons */
+    margin-top: 30px;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: white;
+    background-color: #6366f1; /* Matches the blue used in previous pages */
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+.buttons a:hover {
+    background-color: #4f46e5;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.4);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
