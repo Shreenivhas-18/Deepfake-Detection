@@ -1,97 +1,190 @@
 # Deepfake Detection Project 🎥🔍
 
-Welcome to the Deepfake Detection Project! This project utilizes advanced machine learning techniques to identify deepfake videos and images. Follow the instructions below to set up your environment and start detecting deepfakes. 🚀
+Welcome to the **Deepfake Detection Project**! This project utilizes advanced machine learning techniques to identify deepfake videos and images. Follow the instructions below to set up your environment and start detecting deepfakes. 🚀
 
-## 📚 What is Deepfake Detection?
+---
 
-Deepfake detection involves identifying manipulated media, such as videos and images, where artificial intelligence has been used to alter the content. This project leverages machine learning models to differentiate between authentic and deepfake content. It's essential in combating misinformation and maintaining the integrity of digital media.
+# 📚 What is Deepfake Detection?
 
-## 🛠️ Installation Steps
+Deepfake detection involves identifying manipulated media, such as videos and images, where artificial intelligence has been used to alter the content. This project leverages machine learning models to differentiate between authentic and deepfake content, helping combat misinformation and improve digital media authenticity.
 
-### 1. Download Python 3.10.7 🐍
+---
 
-Ensure Python 3.10.7 is installed on your system. You can download it from the [official Python website](https://www.python.org/downloads/release/python-3107/).
+# 🛠️ Installation Guide
 
-### 2. Create a Virtual Environment 🌟
-
-Create a virtual environment to manage dependencies:
+## 1️⃣ Clone the Repository
 
 ```bash
-python3.10 -m venv venv
+git clone https://github.com/Shreenivhas-18/Deepfake-Detection.git
+cd Deepfake-Detection
 ```
 
-### 3. Activate the Virtual Environment 💻
+---
 
-- **On Windows:**
+## 2️⃣ Install Python
 
-  ```bash
-  venv\Scripts\activate
-  ```
+Install **Python 3.10.7** (recommended).
 
-- **On macOS/Linux:**
+Download:
+https://www.python.org/downloads/release/python-3107/
 
-  ```bash
-  source venv/bin/activate
-  ```
+---
 
-### 4. Install Required Packages 📦
+## 3️⃣ Create a Virtual Environment
 
-Install the dependencies listed in `requirements.txt`:
+```bash
+python -m venv venv
+```
+
+---
+
+## 4️⃣ Activate the Virtual Environment
+
+### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+### macOS/Linux
+
+```bash
+source venv/bin/activate
+```
+
+---
+
+## 5️⃣ Install Required Packages
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5. Configure Model Paths 🗂️
+---
 
-You need to specify the paths to your pre-trained models in `main.py`. Open `main.py` and update the following lines with your model paths:
+# 🤖 Download Pre-trained Models
 
-```python
-# Path to the video model
-model = tf.keras.models.load_model(r"C:\Users\Admin\Desktop\project\Deepfake detection-Final\Video_models")
+The trained AI models are **not included** in this repository because they exceed GitHub's file size limits.
 
-# Path to the image model
-model_dir = r'C:\Users\Admin\Desktop\project\Deepfake detection-Final\image_models'
+Download the model folders from Google Drive:
+
+### 📥 Image Detection Model
+
+https://drive.google.com/drive/folders/1tM2WrJs7EQMkVhuKKx4zuroIML4VxyCZ?usp=drive_link
+
+### 📥 Video Detection Model
+
+https://drive.google.com/drive/folders/19l6TswPDIaDrkT5x94yIT6g8bHaSneJg?usp=drive_link
+
+After downloading, place the folders inside the project directory exactly like this:
+
+```
+Deepfake-Detection/
+│── app.py
+│── main.py
+│── image_models/
+│── Video_models/
+│── templates/
+│── static/
+│── uploads/
+│── requirements.txt
+│── README.md
 ```
 
-Make sure these paths point to your actual model directories.
+---
 
-### 6. Run the Application 🚀
+# ⚙️ Configure Model Paths
 
-Launch the application with:
+Open **main.py** and update the model paths if necessary.
+
+Example:
+
+```python
+# Video Model
+model = tf.keras.models.load_model(r"Video_models")
+
+# Image Model
+model_dir = r"image_models"
+```
+
+If the folders are placed in the project root as shown above, no further changes should be required.
+
+---
+
+# ▶️ Run the Application
 
 ```bash
 python app.py
 ```
 
-The app will start and be ready for deepfake detection!
-
-## 📂 Project Structure
-
-- `app.py`: The main script to run the application.
-- `main.py`: Contains the core deepfake detection logic.
-- `requirements.txt`: Lists the project dependencies.
-
-## 🤔 Troubleshooting
-
-If you face any issues:
-- Verify Python 3.10.7 is installed.
-- Ensure the virtual environment is activated.
-- Double-check the model paths in `main.py`.
-
-For further assistance, feel free to open an issue! 😄
-
-## 📖 Detailed Explanation of Deepfake Detection
-
-Deepfake detection uses machine learning models to analyze videos and images for signs of manipulation. The models are trained on large datasets containing both real and manipulated media. Here's a brief overview of how it works:
-
-1. **Data Collection**: Collect a diverse set of real and deepfake media for training.
-2. **Model Training**: Train models to recognize subtle differences between authentic and manipulated content.
-3. **Detection**: Use the trained models to analyze new media and predict if it is a deepfake.
-
-By following these steps, you can help identify manipulated content and contribute to a more trustworthy digital environment.
+The application will start and be ready for deepfake detection.
 
 ---
 
-Happy detecting! 🎉 If you have any questions or need help, don't hesitate to reach out.
+# 📂 Project Structure
 
+```
+Deepfake-Detection/
+│── app.py
+│── main.py
+│── templates/
+│── static/
+│── uploads/
+│── image_models/
+│── Video_models/
+│── requirements.txt
+│── README.md
+│── LICENSE
+```
+
+---
+
+# 🧠 Technologies Used
+
+* Python
+* TensorFlow
+* OpenCV
+* Vision Transformer (ViT)
+* MTCNN
+* Flask
+* HTML
+* CSS
+* JavaScript
+
+---
+
+# 🤔 Troubleshooting
+
+If you encounter any issues:
+
+* Verify that Python 3.10.7 is installed.
+* Ensure the virtual environment is activated.
+* Confirm that both `image_models` and `Video_models` folders are downloaded and placed in the project root.
+* Install all required dependencies using:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# 📖 How It Works
+
+The application detects deepfake content using deep learning models trained on authentic and manipulated media.
+
+### Workflow
+
+1. Upload an image or video.
+2. The application preprocesses the input.
+3. The appropriate trained model analyzes the media.
+4. The prediction (Real or Fake) is displayed with confidence.
+
+---
+
+# 📜 License
+
+This project is intended for educational and research purposes.
+
+---
+
+⭐ If you found this project helpful, consider giving it a **Star** on GitHub!
